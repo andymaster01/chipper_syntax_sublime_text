@@ -1,0 +1,32 @@
+%YAML 1.2
+---
+# http://www.sublimetext.com/docs/3/syntax.html
+name: Chipper
+file_extensions:
+  - src
+scope: source.chipper
+contexts:
+  main:
+    - match: \b(ADD|AND|CALL|JP|LD|RET|RND|SE|SNE|ST|SUB|SKNP|XOR)\b
+      scope: keyword.control.chipper
+
+    - match: \b(DW|DRW)\b
+      scope: support.constant.chipper
+
+    - match: \b(I|V[0-9A-F])\b
+      scope: storage.register.chipper
+
+    - match: ;
+      scope: punctuation.definition.comment.chipper
+      push: line_comment
+
+    - match: (option\s*binary)
+      scope: constant.language.chipper
+
+    - match: (\w*:)
+      scope: entity.name.label.chipper
+
+  line_comment:
+      - meta_scope: comment.line.chipper
+      - match: $
+        pop: true
