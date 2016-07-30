@@ -1,2 +1,7 @@
 # chipper_syntax_sublime_text
-Sublime text syntax recognization for the Chipper CHIP8 Assembler Language
+
+Sublime Text syntax recognization for the Chipper CHIP8 Assembler Language.
+
+## Specification
+
+https://groups.google.com/forum/#!topic/comp.sys.hp48/e7In51mOgHY
